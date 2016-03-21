@@ -12,9 +12,9 @@ greeting.innerHTML = "Hello World!";
 function yallow() {
     for (i = 0; i < li.length; i++) {
         li[i].style.backgroundColor = "yellow";
-                if (li[i].classList.contains('selected')) {
-                    li[i].classList.remove('selected')
-                };
+        if (li[i].classList.contains('selected')) {
+            li[i].classList.remove('selected')
+        };
     }
 }
 
@@ -51,28 +51,28 @@ function imgMake() {
 
 imgMake();
 
-gray.addEventListener("mouseover", function () {
+gray.addEventListener("mouseover", function() {
     gray.style.visibility = "hidden";
 });
-orange.addEventListener("mouseover", function () {
+orange.addEventListener("mouseover", function() {
     orange.style.width = "400px";
 });
-orange.addEventListener("mouseleave", function () {
+orange.addEventListener("mouseleave", function() {
     orange.style.width = "200px";
 });
 
 reset.addEventListener("click",
-    function () {
+    function() {
         for (i = 0; i < li.length; i++) {
             li[i].classList.remove('selected');
         }
         document.querySelector('img').src = "images/panic.jpeg";
     });
 
-document.onkeydown = function (evt) {
+document.onkeydown = function(evt) {
     evt = evt || window.event;
     if (evt.keyCode > 46 && evt.keyCode < 65) {
-        alert("I hate numbers!")
+        alert("I hate numbers!");
     }
 };
 
@@ -87,6 +87,7 @@ function isSelected(i) {
         yallow();
         li[i].classList.add('selected');
         img.src = imageArray[i];
-   
-    })}
+
+    })
+}
 selectors();
